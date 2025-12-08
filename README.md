@@ -1,4 +1,12 @@
-# Newsroom Frontend
+# Newsroom Frontend - Public News Site
+
+**Part of the Newsroom ecosystem:** This frontend displays articles produced and approved by the AI-powered news pipeline. The frontend is entirely dependent on the backend - it does not contain any content generation logic.
+
+**Related projects:**
+- [Backend (newsroom_ai_pipeline)](https://github.com/JoniHonkanen/newsroom) - Handles news generation, enrichment, and publishing
+- [Prompt Manager (newsroom_prompt_manager)](https://github.com/JoniHonkanen/newsroom_prompt_manager) - Admin interface for backend management
+
+**Technologies:** Next.js 15, TypeScript, Apollo GraphQL, next-intl
 
 Suomenkielinen (sekä EN / SV) Newsroom-projektin julkinen sivusto, jossa backendin moniajagenttiputken (RSS → rikastus → editoriaalinen päätös → julkaisu) generoimat ja hyväksytyt uutiset näytetään. Tämä repositorio sisältää vain renderöinnin ja käyttöliittymän – ei sisällä uutisten tuottavaa logiikkaa.
 
