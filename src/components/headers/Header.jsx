@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./Header.module.css";
 import LogoHologram from "./LogoHologram";
-import { usePathname } from "@/i18n/navigation";
+import { usePathname, Link as LocaleLink } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 
 const leftNavItems = [{ href: "/", label: "" }];
@@ -16,6 +17,7 @@ const rightNavItems = [
 export default function Header() {
   const [stickyActive, setStickyActive] = useState(false);
   const pathname = usePathname();
+  const locale = useLocale();
 
   // Determine if we are on the locale home page
   const isHome = (() => {
@@ -49,6 +51,14 @@ export default function Header() {
             {label}
           </Link>
         ))}
+        <LocaleLink
+          href="/interview"
+          className={styles.link}
+          aria-label={locale === "fi" ? "Haastattelu" : "Interview"}
+        >
+          <span className={styles.longLabel}>{locale === "fi" ? "Haastattelu" : "Interview"}</span>
+          <span className={styles.shortLabel} aria-hidden="true">🎙️</span>
+        </LocaleLink>
       </nav>
 
       <div className={styles.logoContainer}>

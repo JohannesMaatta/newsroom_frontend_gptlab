@@ -94,3 +94,17 @@
     gap: 2vw;
   }
 }
+
+/* Interview link: full word on wide screens, microphone icon on phones */
+.shortLabel {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .longLabel {
+    display: none;
+  }
+  .shortLabel {
+    display: inline;
+  }
+}
