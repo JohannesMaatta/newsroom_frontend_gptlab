@@ -1,0 +1,62 @@
+/* Same box style as the disclaimer, with the site's blue accent instead of gold. */
+.container {
+  margin-top: 1rem;
+  width: 100%;
+  background: #1a1a1aa6;
+  padding: 0.9rem 1rem;
+  color: #f5f5f5;
+  border: 1px solid rgba(0, 123, 255, 0.65);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.05rem;
+  color: #ffffff;
+  font-family: Roboto, sans-serif;
+}
+
+.text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #e5e7eb;
+  font-family: Inter, sans-serif;
+}
+
+.cta {
+  flex-shrink: 0;
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+  font-family: Inter, sans-serif;
+  padding: 0.7rem 1.1rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.cta:hover {
+  background: #0062cc;
+}
+
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta {
+    text-align: center;
+  }
+  .text {
+    font-size: 0.95rem;
+  }
+}

@@ -7,6 +7,7 @@ import NewsGridHorizontal from "@/components/newsGridHorizontal/NewsGridHorizont
 import NewsGridVertical from "@/components/newsGridVertical/NewsGridVertical";
 import AdBanner from "@/components/adBanner/AdBanner";
 import Disclaimer from "@/components/disclaimer/Disclaimer";
+import InterviewPromo from "@/components/interviewPromo/InterviewPromo";
 import styles from "../page.module.css";
 import { GET_NEWS, GET_NEWS_BY_CATEGORY } from "@/graphql/queries";
 import { headers } from "next/headers";
@@ -89,6 +90,7 @@ export default async function Home({ searchParams }: HomeProps) {
 
           {/* Disclaimer heti alkuun ennen ensimmäisiä uutisia */}
           <Disclaimer />
+          <InterviewPromo />
 
           {/* FEATURED WITH CATEGORY */}
           {featuredNews?.length > 0 &&
@@ -183,6 +185,7 @@ export default async function Home({ searchParams }: HomeProps) {
 
       {/* Disclaimer heti alkuun ennen ensimmäisiä uutisia */}
       <Disclaimer />
+          <InterviewPromo />
 
       {featuredNews?.length > 0 &&
         featuredNews.map((item) => <FeaturedNews key={item.id} news={item} />)}
